@@ -56,6 +56,14 @@ public class movementScript : MonoBehaviour
         transform.Rotate((transform.up * moveX) * turningSpeed * Time.deltaTime);
 
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name =="DoorToBathroomFrame" || collision.gameObject.name == "DoorToBathroom" || collision.gameObject.name == "DoorToHallFrame"|| collision.gameObject.name == "DoorToHall") { 
 
+        DoorScript doorScript = collision.gameObject.GetComponent<DoorScript>();       
+            doorScript.Knock();
+        }
+
+    }
 }
 
