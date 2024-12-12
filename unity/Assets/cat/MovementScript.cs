@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class movementScript : MonoBehaviour
 {
     float turningSpeed = 90;
-    float WalkingSpeed = 550;
+    float WalkingSpeed = 1050;
     Animator playerAnimator;
     Rigidbody rb;
     float moveX;
